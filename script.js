@@ -35,7 +35,7 @@ function fetchApi(){
         .catch(err => {
         let resu=document.getElementById("result");
         
-            resu.innerHTML=err["message"];
+            resu.innerHTML=err["messages"];
     });
    
 }
