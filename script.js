@@ -33,6 +33,7 @@ function fetchApi(){
             resu.innerHTML=response["message"];
         })
         .catch(err => {
+        console.log(err)
         let resu=document.getElementById("result");
         
             resu.innerHTML=`The request to the API has timed out. Please try again later, or if the issue persists, please contact the API provider`;
