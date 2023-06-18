@@ -31,17 +31,14 @@ function fetchApi(){
            info.style.display="none";
            let resu=document.getElementById("result");
             resu.innerHTML=response["message"];
+            if(response["message"]==undefined){
+                resu.innerHTML=`The request to the API has timed out. Please try again later, or if the issue persists, please contact the API provider`
+                
+            }
         })
         .catch(err => {
         console.log(err)
-        let resu=document.getElementById("result");
         
-            resu.innerHTML=`The request to the API has timed out. Please try again later, or if the issue persists, please contact the API provider`;
-    }).catch(err => {
-        console.log(err)
-        let resu=document.getElementById("result");
-        
-            resu.innerHTML=`The request to the API has timed out. Please try again later, or if the issue persists, please contact the API provider`;
     });
    
 }
