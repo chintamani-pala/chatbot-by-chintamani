@@ -35,7 +35,7 @@ function fetchApi(){
         .catch(err => {
         let resu=document.getElementById("result");
         
-            resu.innerHTML=err["messages"];
+            resu.innerHTML=`The request to the API has timed out. Please try again later, or if the issue persists, please contact the API provider`;
     });
    
 }
