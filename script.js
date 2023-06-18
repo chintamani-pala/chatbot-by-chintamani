@@ -30,10 +30,13 @@ function fetchApi(){
            console.log(info);
            info.style.display="none";
            let resu=document.getElementById("result");
-        //    resu.innerHTML=
             resu.innerHTML=response["message"];
         })
-        .catch(err => console.error(err));
+        .catch(err => {
+        let resu=document.getElementById("result");
+        
+            resu.innerHTML=err["message"];
+    });
    
 }
 
