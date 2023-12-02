@@ -17,7 +17,7 @@ function fetchApi(){
     const options = {
         method: 'GET',
         headers: {
-            Authorization: 'zAVcjsunIXCx',
+            Authorization: 'q9Oh7Lg7J0Hd',
             'X-RapidAPI-Key': '51a90343e7mshd67878af7f4afaap133dc9jsncea325bfab2f',
             'X-RapidAPI-Host': 'random-stuff-api.p.rapidapi.com'
         }
