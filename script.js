@@ -13,7 +13,7 @@ let query="";
 
 
 
-function fetchApi(){
+function fetchApi(query){
     const options = {
         method: 'GET',
         headers: {
@@ -23,7 +23,7 @@ function fetchApi(){
         }
     };
 
-    fetch(`https://random-stuff-api.p.rapidapi.com/ai/response?user_id=420&message=${query}`, options)
+    fetch(`https://random-stuff-api.p.rapidapi.com/ai/response?message=${query}&user_id=420`, options)
         .then(response => response.json())
         .then(response => {
            let info= document.getElementById("info");
@@ -55,7 +55,7 @@ searchInput.addEventListener("keyup", e =>{
     })
     if(e.key == "Enter" && word){
         
-        var res=fetchApi();
+        var res=fetchApi(query);
         
     }
 });
