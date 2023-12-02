@@ -61,11 +61,19 @@ searchInput.addEventListener("keyup", e =>{
 });
 */
 const wrapper = document.querySelector(".wrapper"),
-  searchInput = wrapper.querySelector("input"),
-  // ... (other variables)
+searchInput = wrapper.querySelector("input"),
+volume = wrapper.querySelector(".word i"),
+infoText = wrapper.querySelector(".info-text"),
+synonyms = wrapper.querySelector(".synonyms .list"),
+removeIcon = wrapper.querySelector(".search span");
+removeIcon.addEventListener('click',()=>{
+    searchInput.value="";
+})
+let audio;
+let query="";
 
 // This function handles the POST request to the new API endpoint
-async function fetchNewApi(query) {
+const fetchNewApi= async (query) =>{
   const url = 'https://robomatic-ai.p.rapidapi.com/api';
   const options = {
     method: 'POST',
