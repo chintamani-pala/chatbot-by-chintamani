@@ -19,7 +19,7 @@ function fetchApi(query){
     info.style.display="block"
     info.innerHTML="Loading..."
     let inputfield=document.getElementById("inputfield")
-    inputfield.value=""
+   
     query=query.replace(/ /g,"+") 
     fetch(`https://chatbot-api-chintamanipala.vercel.app/ask?q=${query}`)
         .then(response => response.json())
@@ -28,6 +28,7 @@ function fetchApi(query){
            console.log(info);
            info.style.display="none";
             resu.innerHTML=response["answer"];
+             inputfield.value=""
             if(response["answer"]==undefined){
                 resu.innerHTML=`The request to the API has timed out. Please try again later, or if the issue persists, please contact the API provider`
                 
