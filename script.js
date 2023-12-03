@@ -36,6 +36,8 @@ function fetchApi(query){
             }
         })
         .catch(err => {
+            info.style.display="none";
+            resu.style.display="block"
         resu.innerHTML="Something Went Wrong Conatct with admin"
         
     });
