@@ -23,7 +23,7 @@ function fetchApi(query){
            info.style.display="none";
            let resu=document.getElementById("result");
             resu.innerHTML=response["answer"];
-            if(response["message"]==undefined){
+            if(response["answer"]==undefined){
                 resu.innerHTML=`The request to the API has timed out. Please try again later, or if the issue persists, please contact the API provider`
                 
             }
