@@ -15,6 +15,7 @@ let query="";
 
 function fetchApi(query){
     let resu=document.getElementById("result");
+    resu.style.display="none"
     let info= document.getElementById("info");
     info.style.display="block"
     info.innerHTML="Loading..."
@@ -27,6 +28,7 @@ function fetchApi(query){
            let info= document.getElementById("info");
            console.log(info);
            info.style.display="none";
+            resu.style.display="block"
             resu.innerHTML=response["answer"];
              inputfield.value=""
             if(response["answer"]==undefined){
