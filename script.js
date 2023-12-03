@@ -14,6 +14,7 @@ let query="";
 
 
 function fetchApi(query){
+    let resu=document.getElementById("result");
     let info= document.getElementById("info");
     info.innerHTML="Loading..."
     query=query.replace(/ /g,"+") 
