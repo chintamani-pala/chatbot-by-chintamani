@@ -26,7 +26,6 @@ function fetchApi(query){
         .then(response => response.json())
         .then(response => {
            let info= document.getElementById("info");
-           console.log(info);
            info.style.display="none";
             resu.style.display="block"
             resu.innerHTML=response["answer"];
@@ -37,7 +36,7 @@ function fetchApi(query){
             }
         })
         .catch(err => {
-        console.log(err)
+        resu.innerHTML="Something Went Wrong Conatct with admin"
         
     });
    
