@@ -14,6 +14,8 @@ let query="";
 
 
 function fetchApi(query){
+    let resu=document.getElementById("result");
+    resu.innerHTML="Loading..."
     query=query.replace(/ /g,"+") 
     fetch(`https://chatbot-api-chintamanipala.vercel.app/ask?q=${query}`)
         .then(response => response.json())
@@ -21,7 +23,6 @@ function fetchApi(query){
            let info= document.getElementById("info");
            console.log(info);
            info.style.display="none";
-           let resu=document.getElementById("result");
             resu.innerHTML=response["answer"];
             if(response["answer"]==undefined){
                 resu.innerHTML=`The request to the API has timed out. Please try again later, or if the issue persists, please contact the API provider`
