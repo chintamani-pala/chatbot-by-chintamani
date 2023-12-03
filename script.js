@@ -16,7 +16,10 @@ let query="";
 function fetchApi(query){
     let resu=document.getElementById("result");
     let info= document.getElementById("info");
+    info.style.display="block"
     info.innerHTML="Loading..."
+    let inputfield=document.getElementById("inputfield")
+    inputfield.value=""
     query=query.replace(/ /g,"+") 
     fetch(`https://chatbot-api-chintamanipala.vercel.app/ask?q=${query}`)
         .then(response => response.json())
